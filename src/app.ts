@@ -1,8 +1,13 @@
 import express from "express";
+import reportsRoutes from "./routes/reportsRoutes";
 
 const app = express();
 const port = 3000;
 
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
+reportsRoutes();
 
 
 try {
